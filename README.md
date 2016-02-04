@@ -171,7 +171,7 @@ Example program: triad
 
 
         llc -filetype=asm -o full.s full.llvm
-        gcc -fno-inline -o triad-instrumented full.s
+        gcc -fno-inline -o triad-instrumented full.s -lm -lz
 
 
      e. Run binary. It will generate a file called `dynamic_trace` under current directory.
