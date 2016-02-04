@@ -1,0 +1,15 @@
+
+
+Makefile
+CMakeCache*
+CTest*
+example
+
+CMakeFiles
+cmake_install.cmake
+
+*.so
+*.llvm
+
+*.*~
+

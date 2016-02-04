@@ -1,7 +1,13 @@
 # In two-number form only. LLVM-Tracer will determine the patch version for you.
-if(NOT DEFINED LLVM_RECOMMEND_VERSION)
+if(DEFINED LLVM_RECOMMEND_VERSION)
+  message("LLVM_RECOMMEND_VERSION is defined: ${LLVM_RECOMMEND_VERSION}")
+elseif(DEFINED ENV{LLVM_RECOMMEND_VERSION})
+  SET(LLVM_RECOMMEND_VERSION $ENV{LLVM_RECOMMEND_VERSION})
+else()
   SET(LLVM_RECOMMEND_VERSION 3.4)
 endif()
+
+message("LLVM_RECOMMEND_VERSION is set to: ${LLVM_RECOMMEND_VERSION}")
 
 # TODO : not used now
 # the llvm libraries which the executable need.
